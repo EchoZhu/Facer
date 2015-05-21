@@ -4,7 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.R.integer;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -18,6 +18,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -27,7 +30,7 @@ import android.widget.Toast;
 
 import com.facepp.error.FaceppParseException;
 
-public class MainActivity extends Activity implements OnClickListener {
+@SuppressLint("NewApi") public class MainActivity extends Activity implements OnClickListener {
 
 	private static final int PIC_CODE = 0X159;
 	private ImageView mPhoto;
@@ -44,6 +47,9 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//隐藏action Bar
+//        ActionBar actionBar = getActionBar();  
+//        actionBar.hide();  
         
         initViews();
         
@@ -52,7 +58,24 @@ public class MainActivity extends Activity implements OnClickListener {
         mPaint = new Paint();
     }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+    	// TODO Auto-generated method stub
+    	 MenuInflater inflater = getMenuInflater();  
+    	 inflater.inflate(R.menu.main, menu);  
+    	return super.onCreateOptionsMenu(menu);
+    }
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch (item.getItemId()) {  
+	    case R.id.actionBar_share:  
+	    Toast.makeText(this, "share", Toast.LENGTH_SHORT).show();  
+	        return true;  
+	    default:  
+	        return super.onOptionsItemSelected(item);  
+	    }
+	}
     private void initEvent() {
 		// TODO Auto-generated method stub
     	mGetImage.setOnClickListener(this);
