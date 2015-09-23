@@ -21,20 +21,31 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int female=0x7f020000;
-        public static final int hint=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int male=0x7f020003;
-        public static final int share=0x7f020004;
-        public static final int t4=0x7f020005;
+        public static final int bt_nobgd=0x7f020000;
+        public static final int btn_style_blue=0x7f020001;
+        public static final int btn_style_five_focused=0x7f020002;
+        public static final int btn_style_five_normal=0x7f020003;
+        public static final int btn_style_five_pressed=0x7f020004;
+        public static final int btn_style_four_pressed=0x7f020005;
+        public static final int btn_style_green=0x7f020006;
+        public static final int btn_style_one_disabled=0x7f020007;
+        public static final int btn_style_one_focused=0x7f020008;
+        public static final int btn_style_one_normal=0x7f020009;
+        public static final int btn_style_one_pressed=0x7f02000a;
+        public static final int female=0x7f02000b;
+        public static final int hint=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int male=0x7f02000e;
+        public static final int share=0x7f02000f;
+        public static final int t4=0x7f020010;
     }
     public static final class id {
         public static final int actionBar_share=0x7f080006;
         public static final int id_age_and_gender=0x7f080005;
-        public static final int id_detect=0x7f080001;
+        public static final int id_detect=0x7f080002;
         public static final int id_getImage=0x7f080000;
         public static final int id_photo=0x7f080003;
-        public static final int id_tip=0x7f080002;
+        public static final int id_tip=0x7f080001;
         public static final int id_waiting=0x7f080004;
     }
     public static final class layout {

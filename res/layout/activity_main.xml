@@ -14,18 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:background="@drawable/bt_nobgd"
         android:text="Get Image" />
-
-
-
-    <Button
-        android:id="@+id/id_detect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/id_getImage"
-        android:layout_alignBottom="@+id/id_getImage"
-        android:layout_centerHorizontal="true"
-        android:text="Detect" />
 
     <TextView
         android:id="@+id/id_tip"
@@ -73,4 +63,15 @@
 	    android:text="123" 
 	        />
 	</FrameLayout>
+
+	<Button
+	    android:id="@+id/id_detect"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/id_getImage"
+	    android:layout_alignBottom="@+id/id_getImage"
+	    android:layout_alignLeft="@+id/id_photo"
+	    android:background="@drawable/bt_nobgd"
+	    android:text="Detect" />
+
 </RelativeLayout>
